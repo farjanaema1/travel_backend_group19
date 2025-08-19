@@ -12,6 +12,12 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const port = process.env.PORT || 5000;
+app.use(cors({
+  origin: ["https://travel-guro-19.vercel.app/"], 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 
 // Middleware
 app.use(cors());
